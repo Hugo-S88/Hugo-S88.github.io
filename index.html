@@ -103,11 +103,16 @@ table.blueTable tfoot .links a{
 }
 
 audio{
-  width: 100%;
+  width: 100%
 }
 .models {
   font-weight: bold;
   text-align: center;
+  width: 12.5%
+
+}
+.refs {
+  width: 100%;
 }
 </style>
 </head>
@@ -139,19 +144,22 @@ All details can be found in the <a href="">FiLMSpeech paper.</a>
 <table class="blueTable">
 <thead>
 <tr>
-<th colspan="4">Example 1</th>
+<th colspan="8">Example 1</th>
 </tr>
 </thead>
 <tbody>
-<tr><td colspan="4"><b>Reference text:</b> <i>"This is the sentence that is being pronounced."</i></td></tr>
-<tr><td colspan="4"><b>Reference speaker:</b> Speaker 1 (Male), unseen during training</td></tr>
-<tr><td colspan="4"><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td></tr>
-<tr><td colspan="4"><b>Prosody transfered to text:</b> <i>"This an other sentence that is being pronounced."</i></td></tr>
-<tr><td colspan="4"><b>Prosody transfered to speaker:</b> Speaker 2 (Male)</td></tr>
 <tr>
-<td class="models"><big>Tacotron GST</big></td><td class="models"><big>Tacotron VAE</big></td><td class="models"><big>Flowtron</big></td><td class="models"><big>FiLMSpeech</big></td></tr>
+<td colspan="4"><b>Reference text:</b> <i>"This is the sentence that is being pronounced."</i></td>
+<td colspan="2"><b>Reference speaker:</b> Speaker 1 (Male), unseen during training</td>
+<td rowspan="2" colspan="4"><audio controls="controls" class="refs"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td>
+</tr>
 <tr>
-<td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td></tr>
+<td colspan="4"><b>Prosody transfered to text:</b> <i>"This an other sentence that is being pronounced."</i></td>
+<td colspan="2"><b>Prosody transfered to speaker:</b> Speaker 2 (Male)</td>
+</tr>
+<tr>
+<td class="models"><big>Tacotron GST:</big></td><td class="models"><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td class="models"><big>Tacotron VAE:</big></td><td class="models"><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td class="models"><big>Flowtron:</big></td><td class="models"><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td class="models"><big>FiLMSpeech:</big></td><td class="models"><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td>
+</tr>
 </tbody>
 </table>
 <br/>
