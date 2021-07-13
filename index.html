@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>FILMSPEECH AUDIO SAMPLES PAGE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  
+body {
+  font-family: 'Roboto',sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+  margin: 0;
+}
+
+  
 table.blueTable {
   border: 1px solid #1C6EA4;
   background-color: #F0F0F0;
@@ -14,7 +27,7 @@ table.blueTable td, table.blueTable th {
   padding: 3px 2px;
 }
 table.blueTable tbody td {
-  font-size: 13px;
+  font-size: 15px;
 }
 table.blueTable tr:nth-child(even) {
   background: #D2D2D2;
@@ -27,9 +40,9 @@ table.blueTable thead {
   border-bottom: 2px solid #444444;
 }
 table.blueTable thead th {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
-  color: #FFB800;
+  color: #FFCD00;
   border-left: 2px solid #B8B8B8;
 }
 table.blueTable thead th:first-child {
@@ -54,45 +67,155 @@ table.blueTable tfoot .links {
 }
 table.blueTable tfoot .links a{
   display: inline-block;
-  background: #FFB800;
+  background: #FFCD00;
   color: #000000;
   padding: 2px 8px;
   border-radius: 5px;
 }
+
+.header {
+  background: #000000;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+
+
+}
+.cont {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-basis: 100%
+}
+
+.content {
+  padding: 20px;
+}
+.forge {
+  color: #FFCD00;
+  font-size: 45px;
+  font-family: 'Courier', monospace;
+
+}
+
+.img1{
+  padding: 3px;
+}
+
+audio{
+  width: 100%;
+}
+.models {
+  font-weight: bold;
+  text-align: center;
+}
 </style>
 </head>
 <body>
+<div class="header">
+	<div class="cont">
+		<div class="img1">
+			<img src="https://avatars.githubusercontent.com/u/61422130?v=4" alt="la forge logo" loading="lazy" width="81" height="81">
+		</div>
+		<div class="forge">La Forge</div>
 
-<h2>Basic HTML Table</h2>
+	</div> 
+	
+		<div class="img1">
+			<img src="https://static-wordpress.akamaized.net/montreal.ubisoft.com/wp-content/uploads/2018/10/03173820/Logo_Ubi_Stacked_HOR_Montreal_WHITE-500x162.png" alt="ubisoft logo" loading="lazy" width="166" height="54">
+		</div>
+	
+
+	
+</div>
+
+<div class="content">
+<h1>FILMSPEECH AUDIO SAMPLES PAGE</h1>
+This page provides audio exerpts synthethized with the FiLMSpeech Text-To-Speech model, along with examples generated from other models for comparison.<br/>
+All details can be found in the <a href="">FiLMSpeech paper.</a>
+<h2>Prosody Transfer</h2>
+
 
 <table class="blueTable">
 <thead>
 <tr>
-<th>head1</th>
-<th>head2</th>
-<th>head3</th>
-<th>head4</th>
+<th colspan="4">Example 1</th>
 </tr>
 </thead>
-<tfoot>
-<tr>
-<td colspan="4">
-<div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
-</td>
-</tr>
-</tfoot>
 <tbody>
+<tr><td colspan="4"><b>Reference text:</b> <i>"This is the sentence that is being pronounced."</i></td></tr>
+<tr><td colspan="4"><b>Reference speaker:</b> Speaker 1 (Male), unseen during training</td></tr>
+<tr><td colspan="4"><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td></tr>
+<tr><td colspan="4"><b>Prosody transfered to text:</b> <i>"This an other sentence that is being pronounced."</i></td></tr>
+<tr><td colspan="4"><b>Prosody transfered to speaker:</b> Speaker 2 (Male)</td></tr>
 <tr>
-<td>cell1_1</td><td>cell2_1</td><td>cell3_1</td><td>cell4_1</td></tr>
+<td class="models"><big>Tacotron GST</big></td><td class="models"><big>Tacotron VAE</big></td><td class="models"><big>Flowtron</big></td><td class="models"><big>FiLMSpeech</big></td></tr>
 <tr>
-<td>cell1_2</td><td>cell2_2</td><td>cell3_2</td><td>cell4_2</td></tr>
-<tr>
-<td>cell1_3</td><td>cell2_3</td><td>cell3_3</td><td>cell4_3</td></tr>
-<tr>
-<td>cell1_4</td><td>cell2_4</td><td>cell3_4</td><td>cell4_4</td></tr>
+<td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td></tr>
 </tbody>
-</tr>
 </table>
+<br/>
+<table class="blueTable">
+<thead>
+<tr>
+<th colspan="4">Example 2</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="4"><b>Reference text:</b> <i>"This is the sentence that is being pronounced."</i></td></tr>
+<tr><td colspan="4"><b>Reference speaker:</b> Speaker 1 (Male), unseen during training</td></tr>
+<tr><td colspan="4"><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td></tr>
+<tr><td colspan="4"><b>Prosody transfered to text:</b> <i>"This an other sentence that is being pronounced."</i></td></tr>
+<tr><td colspan="4"><b>Prosody transfered to speaker:</b> Speaker 2 (Male)</td></tr>
+<tr>
+<td class="models"><big>Tacotron GST</big></td><td class="models"><big>Tacotron VAE</big></td><td class="models"><big>Flowtron</big></td><td class="models"><big>FiLMSpeech</big></td></tr>
+<tr>
+<td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td></tr>
+</tbody>
+</table>
+<br/>
+<h2>Ablation study</h2>
+<p>The next examples come from our proposed model with different weights attributed to the adversarial loss, in order to show ...</p>
 
+<table class="blueTable">
+<thead>
+<tr>
+<th colspan="4">Example 1</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="4"><b>Reference text:</b> <i>"This is the sentence that is being pronounced."</i></td></tr>
+<tr><td colspan="4"><b>Reference speaker:</b> Speaker 1 (Male), unseen during training</td></tr>
+<tr><td colspan="4"><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td></tr>
+<tr><td colspan="4"><b>Prosody transfered to text:</b> <i>"This an other sentence that is being pronounced."</i></td></tr>
+<tr><td colspan="4"><b>Prosody transfered to speaker:</b> Speaker 2 (Male)</td></tr>
+<tr>
+<td class="models"><big>Tacotron GST</big></td><td class="models"><big>Tacotron VAE</big></td><td class="models"><big>Flowtron</big></td><td class="models"><big>FiLMSpeech</big></td></tr>
+<tr>
+<td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td></tr>
+</tbody>
+</table>
+<br/>
+<table class="blueTable">
+<thead>
+<tr>
+<th colspan="4">Example 2</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="4"><b>Reference text:</b> <i>"This is the sentence that is being pronounced."</i></td></tr>
+<tr><td colspan="4"><b>Reference speaker:</b> Speaker 1 (Male), unseen during training</td></tr>
+<tr><td colspan="4"><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td></tr>
+<tr><td colspan="4"><b>Prosody transfered to text:</b> <i>"This an other sentence that is being pronounced."</i></td></tr>
+<tr><td colspan="4"><b>Prosody transfered to speaker:</b> Speaker 2 (Male)</td></tr>
+<tr>
+<td class="models"><big>Tacotron GST</big></td><td class="models"><big>Tacotron VAE</big></td><td class="models"><big>Flowtron</big></td><td class="models"><big>FiLMSpeech</big></td></tr>
+<tr>
+<td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td><td><audio controls="controls"><source src="../audio/gt_recording_2/0000000009.mp3" autoplay=""></audio></td></tr>
+</tbody>
+</table>
+<br/>
+<i>Copyright &#169; 2021 Ubisoft Entertainment Inc. All rights reserved.</i>
+</div>
 </body>
 </html>
